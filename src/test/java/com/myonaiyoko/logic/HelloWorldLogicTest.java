@@ -40,4 +40,13 @@ class HelloWorldLogicTest {
 		assertEquals("helloworld!!!", model.getMessage());
 	}
 
+	@Test
+	void helloworld0件テスト() {
+		List<HelloWorldEntity> list = new ArrayList<HelloWorldEntity>();
+		doReturn(list).when(dao).selectAll();
+		
+		HelloWorldModel model = logic.getHelloWorld();
+
+		assertEquals("データ無し", model.getMessage());
+	}
 }

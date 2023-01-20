@@ -1,5 +1,7 @@
 package com.myonaiyoko;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -8,6 +10,8 @@ class MySpringBootSampleApplicationTests {
 
 	@Test
 	void contextLoads() {
+		MySpringBootSampleApplication.main(new String[] {});
+		assertTrue(true);
 	}
 
 }

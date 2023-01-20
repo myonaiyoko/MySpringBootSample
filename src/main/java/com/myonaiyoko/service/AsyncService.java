@@ -9,13 +9,8 @@ import org.springframework.stereotype.Service;
 public class AsyncService {
 
 	@Async
-	public void myAsync(String arg, long wait, List<String> list) {
-		try {
-			Thread.sleep(wait);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
+	public void myAsync(String arg, long wait, List<String> list) throws InterruptedException {
+		Thread.sleep(wait);
 		list.add(arg);
 	}
 }

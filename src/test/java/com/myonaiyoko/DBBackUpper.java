@@ -1,10 +1,9 @@
 package com.myonaiyoko;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -34,36 +33,26 @@ public abstract class DBBackUpper {
 	private static Connection con;
 	private static IDatabaseConnection dbCon;
 
-	protected static void dbBackup() {
+	protected static void dbBackup() throws SQLException, DatabaseUnitException, FileNotFoundException, IOException {
 
 		ResourceBundle rb = ResourceBundle.getBundle("test");
-		try {
-			con = DriverManager.getConnection(
-					rb.getString("spring.datasource.url"),
-					rb.getString("spring.datasource.username"),
-					rb.getString("spring.datasource.password"));
-			dbCon = new DatabaseConnection(con);
-			QueryDataSet backupDataSet = new QueryDataSet(dbCon);
+		con = DriverManager.getConnection(
+				rb.getString("spring.datasource.url"),
+				rb.getString("spring.datasource.username"),
+				rb.getString("spring.datasource.password"));
+		dbCon = new DatabaseConnection(con);
+		QueryDataSet backupDataSet = new QueryDataSet(dbCon);
 
-			for (String table : testTables) {
-				backupDataSet.addTable(table);
-			}
-
-			FlatXmlDataSet.write(backupDataSet, new FileOutputStream(backXml));
-		} catch (SQLException | DatabaseUnitException | IOException e) {
-			e.printStackTrace();
+		for (String table : testTables) {
+			backupDataSet.addTable(table);
 		}
+
+		FlatXmlDataSet.write(backupDataSet, new FileOutputStream(backXml));
 	}
 
-	protected static void dbRestore() {
-		try {
-			IDataSet dataset = new FlatXmlDataSetBuilder().build(new File(backXml));
-			DatabaseOperation.CLEAN_INSERT.execute(dbCon, dataset);
-
-			Files.delete(Paths.get(backXml));
-		} catch (SQLException | DatabaseUnitException | IOException e) {
-			e.printStackTrace();
-		}
+	protected static void dbRestore() throws DatabaseUnitException, SQLException, IOException {
+		IDataSet dataset = new FlatXmlDataSetBuilder().build(new File(backXml));
+		DatabaseOperation.CLEAN_INSERT.execute(dbCon, dataset);
 	}
 
 }

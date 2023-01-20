@@ -2,6 +2,9 @@ package com.myonaiyoko.dao;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
@@ -9,6 +12,7 @@ import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.myonaiyoko.DBBackUpper;
 import com.myonaiyoko.entity.HelloWorldEntity;
 
+import org.dbunit.DatabaseUnitException;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -36,13 +40,13 @@ class HelloWorldDaoTest extends DBBackUpper {
 	private HelloWorldDao dao;
 
 	@BeforeAll
-	static void initAll() {
+	static void initAll() throws FileNotFoundException, SQLException, DatabaseUnitException, IOException {
 		testTables = new String[] { "helloworld" };
 		dbBackup();
 	}
 
 	@AfterAll
-	static void tearDownAll() {
+	static void tearDownAll() throws DatabaseUnitException, SQLException, IOException {
 		dbRestore();
 	}
 
