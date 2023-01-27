@@ -1,4 +1,4 @@
-package com.myonaiyoko.service;
+package com.myonaiyoko.service.helloworld;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -12,8 +12,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.myonaiyoko.logic.HelloWorldLogic;
-import com.myonaiyoko.model.HelloWorldModel;
+import com.myonaiyoko.logic.helloworld.HelloWorldLogic;
+import com.myonaiyoko.model.helloworld.HelloWorldModel;
 
 @ExtendWith(MockitoExtension.class)
 @TestMethodOrder(OrderAnnotation.class)

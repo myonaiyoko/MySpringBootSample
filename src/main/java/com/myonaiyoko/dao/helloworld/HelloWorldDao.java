@@ -1,14 +1,14 @@
-package com.myonaiyoko.dao;
+package com.myonaiyoko.dao.helloworld;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.myonaiyoko.entity.HelloWorldEntity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Repository;
+
+import com.myonaiyoko.entity.helloworld.HelloWorldEntity;
 
 @Repository
 public class HelloWorldDao {

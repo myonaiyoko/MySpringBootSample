@@ -1,4 +1,4 @@
-package com.myonaiyoko.service;
+package com.myonaiyoko.service.helloworld;
 
 import java.util.List;
 

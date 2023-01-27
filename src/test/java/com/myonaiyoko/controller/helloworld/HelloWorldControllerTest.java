@@ -1,4 +1,4 @@
-package com.myonaiyoko.controller;
+package com.myonaiyoko.controller.helloworld;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -20,8 +20,8 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.myonaiyoko.model.HelloWorldModel;
-import com.myonaiyoko.service.HelloWorldService;
+import com.myonaiyoko.model.helloworld.HelloWorldModel;
+import com.myonaiyoko.service.helloworld.HelloWorldService;
 
 @SpringBootTest
 @AutoConfigureMockMvc

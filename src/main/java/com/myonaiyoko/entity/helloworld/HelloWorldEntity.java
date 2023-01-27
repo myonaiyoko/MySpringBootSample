@@ -1,4 +1,4 @@
-package com.myonaiyoko.entity;
+package com.myonaiyoko.entity.helloworld;
 
 public class HelloWorldEntity {
 

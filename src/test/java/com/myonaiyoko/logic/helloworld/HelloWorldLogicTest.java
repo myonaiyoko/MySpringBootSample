@@ -1,4 +1,4 @@
-package com.myonaiyoko.logic;
+package com.myonaiyoko.logic.helloworld;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -13,9 +13,9 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.myonaiyoko.dao.HelloWorldDao;
-import com.myonaiyoko.entity.HelloWorldEntity;
-import com.myonaiyoko.model.HelloWorldModel;
+import com.myonaiyoko.dao.helloworld.HelloWorldDao;
+import com.myonaiyoko.entity.helloworld.HelloWorldEntity;
+import com.myonaiyoko.model.helloworld.HelloWorldModel;
 
 @ExtendWith(MockitoExtension.class)
 @SpringBootTest

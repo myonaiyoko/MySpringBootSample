@@ -1,9 +1,9 @@
-package com.myonaiyoko.controller;
+package com.myonaiyoko.controller.helloworld;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.myonaiyoko.model.HelloWorldModel;
-import com.myonaiyoko.service.HelloWorldService;
+import com.myonaiyoko.model.helloworld.HelloWorldModel;
+import com.myonaiyoko.service.helloworld.HelloWorldService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

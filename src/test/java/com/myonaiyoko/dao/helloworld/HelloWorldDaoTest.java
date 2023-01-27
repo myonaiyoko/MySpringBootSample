@@ -1,4 +1,4 @@
-package com.myonaiyoko.dao;
+package com.myonaiyoko.dao.helloworld;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,7 +10,7 @@ import java.util.List;
 import com.github.springtestdbunit.DbUnitTestExecutionListener;
 import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.myonaiyoko.DBBackUpper;
-import com.myonaiyoko.entity.HelloWorldEntity;
+import com.myonaiyoko.entity.helloworld.HelloWorldEntity;
 
 import org.dbunit.DatabaseUnitException;
 import org.junit.jupiter.api.AfterAll;

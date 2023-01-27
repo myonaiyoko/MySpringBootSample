@@ -1,4 +1,4 @@
-package com.myonaiyoko.service;
+package com.myonaiyoko.service.helloworld;
 
 import static org.junit.jupiter.api.Assertions.*;
 

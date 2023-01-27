@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <todo id="1" user_id="00001" memo="1st memo" deadline="2023-01-28" status="complete"/>
+  <todo id="2" user_id="00001" memo="2nd memo" deadline="2023-01-28" status="unfinished"/>
+  <todo id="3" user_id="00002" memo="other user memo" deadline="2023-01-28" status="unfinished"/>
+</dataset>

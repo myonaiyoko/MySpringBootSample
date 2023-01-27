@@ -1,7 +1,7 @@
-package com.myonaiyoko.service;
+package com.myonaiyoko.service.helloworld;
 
-import com.myonaiyoko.logic.HelloWorldLogic;
-import com.myonaiyoko.model.HelloWorldModel;
+import com.myonaiyoko.logic.helloworld.HelloWorldLogic;
+import com.myonaiyoko.model.helloworld.HelloWorldModel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

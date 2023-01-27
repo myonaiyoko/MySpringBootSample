@@ -1,4 +1,4 @@
-package com.myonaiyoko.controller;
+package com.myonaiyoko.controller.helloworld;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.myonaiyoko.service.AsyncService;
+import com.myonaiyoko.service.helloworld.AsyncService;
 
 @RestController
 @RequestMapping("/async")

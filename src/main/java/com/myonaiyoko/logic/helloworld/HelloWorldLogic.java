@@ -1,10 +1,10 @@
-package com.myonaiyoko.logic;
+package com.myonaiyoko.logic.helloworld;
 
 import java.util.List;
 
-import com.myonaiyoko.dao.HelloWorldDao;
-import com.myonaiyoko.entity.HelloWorldEntity;
-import com.myonaiyoko.model.HelloWorldModel;
+import com.myonaiyoko.dao.helloworld.HelloWorldDao;
+import com.myonaiyoko.entity.helloworld.HelloWorldEntity;
+import com.myonaiyoko.model.helloworld.HelloWorldModel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

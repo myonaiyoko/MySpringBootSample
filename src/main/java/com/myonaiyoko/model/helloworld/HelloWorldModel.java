@@ -1,4 +1,4 @@
-package com.myonaiyoko.model;
+package com.myonaiyoko.model.helloworld;
 
 public class HelloWorldModel {
 
